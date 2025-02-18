@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>در حال انتقال...</title>
+    <meta http-equiv="refresh" content="20;url=ddos.html"> <!-- انتقال بعد از 20 ثانیه -->
+    
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .ad-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .ad-container img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        /* استایل دایره تایمر */
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .timer {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: conic-gradient(#3498db 0% 100%, #ddd 0%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            position: relative;
+        }
+        .timer::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+        }
+        .timer span {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- تبلیغات (گیف کلیک‌شونده) -->
+    <div class="ad-container">
+        <a href="https://your-ad-link.com" target="_blank">
+            <img src="img/ad.gif" alt="تبلیغات">
+        </a>
+    </div>
+
+    <p>در حال انتقال به صفحه اصلی... اگر منتقل نشدید، <a href="ddos.html">اینجا کلیک کنید</a>.</p>
+
+    <!-- تایمر دایره‌ای -->
+    <div class="timer-container">
+        <div class="timer">
+            <span id="countdown">20</span>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 20;
+        const countdownEl = document.getElementById("countdown");
+        const timerEl = document.querySelector(".timer");
+
+        function updateTimer() {
+            timeLeft--;
+            countdownEl.textContent = timeLeft;
+
+            // به‌روزرسانی دایره پیشرفت
+            let progress = (timeLeft / 20) * 100;
+            timerEl.style.background = `conic-gradient(#3498db ${progress}%, #ddd 0%)`;
+
+            if (timeLeft <= 0) {
+                window.location.href = "ddos.html";
+            }
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+
+</body>
+</html>

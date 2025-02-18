@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E1E1E; /* رنگ پس‌زمینه تیره‌تر */
+    color: #B0B0B0; /* متن خاکی برای خوانایی */
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.content-box {
+    background-color: #2E2E2E;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.5); /* آبی */
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content-box h1 {
+    font-size: 36px;
+    color: #0099FF; /* رنگ آبی */
+    text-shadow: 0px 0px 10px #0099FF;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #A9A9A9; /* رنگ خاکی دودی */
+    margin-bottom: 30px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-section label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0099FF; /* رنگ آبی */
+    border-radius: 5px;
+    background-color: #3C3C3C; /* خاکی دودی */
+    color: #0099FF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.3);
+    outline: none;
+}
+
+.input-section button {
+    background-color: #0099FF; /* رنگ آبی */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #007ACC; /* رنگ آبی تیره‌تر */
+    transform: scale(1.05);
+}
+
+.ip-section {
+    margin-bottom: 20px;
+}
+
+.attack-section {
+    margin-bottom: 30px;
+}
+
+.attack-section button {
+    background-color: #FF4040; /* رنگ قرمز */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.attack-section button:hover {
+    background-color: #FF6666; /* رنگ قرمز تیره‌تر */
+    transform: scale(1.05);
+}
+
+.attack-section button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.log-section {
+    background-color: #2E2E2E;
+    padding: 20px;
+    border: 1px solid #0099FF; /* آبی */
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0, 128, 255, 0.5);
+}
+
+.log-section h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#log-output {
+    color: #B0B0B0; /* خاکی */
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+}
+
+#log-output .log-entry {
+    margin-bottom: 10px;
+}
+
+#log-output .success {
+    color: #00FF00; /* سبز برای موفقیت */
+}
+
+#log-output .error {
+    color: #FF4040; /* قرمز برای خطا */
+}
+
+/* برای موبایل */
+@media (max-width: 768px) {
+    .content-box {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .content-box h1 {
+        font-size: 28px;
+    }
+
+    .input-section input,
+    .input-section button {
+        width: 100%;
+    }
+
+    .attack-section button {
+        width: 48%;
+        margin: 5px 0;
+    }
+
+    .log-section {
+        max-height: 200px;
+    }
+}
+
+/* استایل جدید برای فوتر */
+.footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #B0B0B0;
+}
+
+.footer .brand-name {
+    color: #0099FF; /* رنگ آبی برای "زد" */
+    font-weight: bold;
+}
+
+.footer .logo {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+/* استایل برای فلش */
+.next-page {
+    position: absolute; /* قرار دادن فلش در موقعیت ثابت */
+    top: 20px; /* فاصله از بالای صفحه */
+    right: 20px; /* فاصله از راست */
+}
+
+.next-link {
+    font-size: 30px; /* اندازه فلش */
+    color: #0099FF; /* رنگ آبی */
+    text-decoration: none; /* حذف زیرخط */
+    font-weight: bold;
+    transition: transform 0.3s ease; /* انیمیشن تغییر اندازه */
+}
+
+.next-link:hover {
+    transform: scale(1.2); /* افزایش اندازه فلش هنگام هاور */
+}

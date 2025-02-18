@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> حمله DDoS</title>
+    <link rel="stylesheet" href="css/ddos.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+
+</head>
+<body>
+    <!-- فلش برای هدایت به صفحه بعدی -->
+<div class="next-page">
+    <a href="phone.html" class="next-link">
+        &#8594; <!-- فلش به سمت راست -->
+    </a>
+</div>
+
+    <div class="main-container">
+        <div class="content-box">
+            <h1> حمله DDoS</h1>
+            <p class="subtitle">حملات مرگ بار با دیداس زد هیچ سایتی در امان نیست</p>
+
+            <div class="input-section">
+                <label for="domain">دامنه را وارد کنید:</label>
+                <input type="text" id="domain" placeholder="مثال: example.com">
+                <button onclick="resolveIP()">دریافت IP</button>
+            </div>
+
+            <div class="ip-section">
+                <p id="resolved-ip">آی‌پی دریافت شده: </p>
+            </div>
+
+            <div class="attack-section">
+                <button id="start-btn" onclick="startAttack()" disabled>شروع حمله</button>
+                <button id="stop-btn" onclick="stopAttack()" disabled>توقف حمله</button>
+            </div>
+
+            <div class="log-section">
+                <h2>گزارش حمله</h2>
+                <div id="log-output"></div>
+            </div>
+
+            <!-- اضافه کردن بخش "ساخته شده توسط زد" با لوگو -->
+            <div class="footer">
+                <p>ساخته شده توسط <a href="https://t.me/zed_exe" class="brand-name" target="_blank">زد</a> <img src="img/logo.png" alt="لوگو" class="logo"></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="js/ddos.js"></script>
+</body>
+</html>

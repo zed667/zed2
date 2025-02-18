@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلاعات شماره تلفن</title>
+    <link rel="stylesheet" href="css/phone.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+    <!-- فلش برای برگشت به صفحه دیداس -->
+    <div class="back-arrow">
+        <a href="ddos.html" class="back-link">&#8592;</a>
+    </div>
+
+    <div class="main-container">
+        <div class="content-box">
+            <h1>اطلاعات شماره تلفن</h1>
+            <p class="subtitle">اطلاعات پیام‌ها و تماس‌ها</p>
+
+            <div class="input-section">
+                <label for="phone-number">شماره تلفن را وارد کنید:</label>
+                <input type="text" id="phone-number" placeholder="مثال: 09123456789">
+                <button onclick="getPhoneInfo()">دریافت اطلاعات</button>
+            </div>
+
+            <div class="info-section">
+                <h2>اطلاعات شماره</h2>
+                <div id="loading-message" class="loading-message"></div>
+
+                <!-- قسمت‌های نمایش اطلاعات -->
+                <div id="info-box" class="info-box"></div>
+            </div>
+
+            <div class="footer">
+                <p>ساخته شده توسط <a href="https://t.me/zed_exe" class="brand-name" target="_blank">زد</a> 
+                <img src="img/logo.png" alt="لوگو" class="logo"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/phone.js"></script>
+</body>
+</html>
